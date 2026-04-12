@@ -92,8 +92,10 @@ npm run dev
 2. Browse courses
 3. Enroll in a course
 4. View enrolled courses in `My Learning`
-5. Signup/login as an admin
-6. Create courses from the Admin page
+   > Note (Demo/Test): The signup form allows selecting `role=admin` so evaluators can test the admin-only course creation flow easily. In a production app, admin access should be granted by the system (not chosen during signup).
+
+6. Signup/login as an admin
+7. Create courses from the Admin page
 
 
 ## Screenshot
