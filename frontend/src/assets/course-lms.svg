@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" fill="none">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="720" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1E1147"/>
+      <stop offset="0.55" stop-color="#5B2DA7"/>
+      <stop offset="1" stop-color="#D4C0FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="420" rx="32" fill="url(#bg1)"/>
+  <circle cx="615" cy="84" r="72" fill="white" fill-opacity="0.1"/>
+  <circle cx="91" cy="329" r="58" fill="white" fill-opacity="0.08"/>
+  <text x="42" y="102" fill="white" font-size="62" font-family="Segoe UI, Arial" font-weight="800">BUILD</text>
+  <text x="42" y="168" fill="white" font-size="62" font-family="Segoe UI, Arial" font-weight="800">LMS</text>
+  <text x="42" y="220" fill="white" font-size="30" font-family="Segoe UI, Arial" font-weight="600">Platform</text>
+  <rect x="306" y="56" width="328" height="214" rx="24" fill="white" fill-opacity="0.95"/>
+  <rect x="328" y="78" width="284" height="18" rx="9" fill="#E8EDFF"/>
+  <rect x="328" y="110" width="150" height="20" rx="10" fill="#8C8FFF"/>
+  <rect x="328" y="144" width="202" height="14" rx="7" fill="#DCE2FF"/>
+  <rect x="328" y="170" width="238" height="14" rx="7" fill="#DCE2FF"/>
+  <rect x="328" y="204" width="112" height="34" rx="17" fill="#7F6BFF"/>
+  <rect x="470" y="204" width="112" height="34" rx="17" fill="#F2F4FF"/>
+</svg>

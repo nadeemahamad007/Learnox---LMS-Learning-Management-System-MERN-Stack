@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" fill="none">
+  <defs>
+    <linearGradient id="bg7" x1="0" y1="0" x2="720" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#121A52"/>
+      <stop offset="0.52" stop-color="#282C7C"/>
+      <stop offset="1" stop-color="#7E78FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="420" rx="32" fill="url(#bg7)"/>
+  <text x="38" y="78" fill="white" font-size="38" font-family="Segoe UI, Arial" font-weight="700">Car Rental</text>
+  <text x="38" y="126" fill="#C7D3FF" font-size="26" font-family="Segoe UI, Arial">with Admin Dashboard</text>
+  <text x="38" y="328" fill="#67FF93" font-size="54" font-family="Segoe UI, Arial" font-weight="900">MERN</text>
+  <text x="38" y="372" fill="white" font-size="40" font-family="Segoe UI, Arial" font-weight="700">STACK</text>
+  <rect x="320" y="64" width="336" height="252" rx="28" fill="#101319"/>
+  <path d="M368 254C424 176 530 156 610 176C584 128 522 104 442 112C402 116 360 150 340 210L368 254Z" fill="#0A0A0A" stroke="#464646" stroke-width="4"/>
+  <circle cx="430" cy="252" r="20" fill="#111"/>
+  <circle cx="568" cy="252" r="20" fill="#111"/>
+  <path d="M464 206H554" stroke="#FF9B2B" stroke-width="6" stroke-linecap="round"/>
+</svg>

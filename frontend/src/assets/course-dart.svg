@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" fill="none">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="720" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF5FF"/>
+      <stop offset="0.55" stop-color="#DDE6F2"/>
+      <stop offset="1" stop-color="#F7F0E3"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="420" rx="32" fill="url(#bg2)"/>
+  <path d="M0 0H260L178 420H0V0Z" fill="#C5D7E8"/>
+  <circle cx="170" cy="170" r="96" fill="#F23A3A"/>
+  <circle cx="170" cy="170" r="62" fill="#FFF7F7"/>
+  <circle cx="170" cy="170" r="28" fill="#F23A3A"/>
+  <path d="M235 95L294 36L338 64L258 129L235 95Z" fill="#46A9A8"/>
+  <text x="330" y="94" fill="#5D503D" font-size="30" font-family="Georgia, serif">Coding with Creativity</text>
+  <text x="330" y="188" fill="#553E29" font-size="56" font-family="Georgia, serif">FLUTTER &amp; DART</text>
+  <text x="330" y="248" fill="#553E29" font-size="54" font-family="Georgia, serif">PROGRAMMING</text>
+  <text x="330" y="316" fill="#553E29" font-size="48" font-family="Georgia, serif">5 HOURS PRACTICAL</text>
+</svg>

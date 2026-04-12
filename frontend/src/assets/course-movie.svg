@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" fill="none">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="720" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0E0E10"/>
+      <stop offset="0.52" stop-color="#4B0202"/>
+      <stop offset="1" stop-color="#FF6A3A"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="420" rx="32" fill="url(#bg3)"/>
+  <text x="38" y="72" fill="white" font-size="30" font-family="Segoe UI, Arial">Build</text>
+  <text x="38" y="132" fill="#FF2F2F" font-size="62" font-family="Segoe UI, Arial" font-weight="800">Movie</text>
+  <text x="38" y="190" fill="#FF2F2F" font-size="62" font-family="Segoe UI, Arial" font-weight="800">Booking</text>
+  <text x="38" y="236" fill="white" font-size="34" font-family="Segoe UI, Arial" font-weight="700">Platform</text>
+  <rect x="310" y="60" width="356" height="214" rx="24" fill="#1B1B24"/>
+  <path d="M310 110C380 50 470 26 666 54V274H310V110Z" fill="#640808"/>
+  <rect x="338" y="196" width="288" height="122" rx="18" fill="white" fill-opacity="0.95"/>
+  <rect x="356" y="214" width="66" height="86" rx="12" fill="#2A3046"/>
+  <rect x="434" y="214" width="66" height="86" rx="12" fill="#4B0D0D"/>
+  <rect x="512" y="214" width="66" height="86" rx="12" fill="#2A3046"/>
+  <text x="42" y="354" fill="#FF4D31" font-size="54" font-family="Segoe UI, Arial" font-weight="900">REACT</text>
+</svg>
