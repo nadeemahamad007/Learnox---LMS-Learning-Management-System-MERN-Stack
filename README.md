@@ -2,6 +2,12 @@
 
 A mini Learning Management System built with MongoDB, Express, React, and Node.js. The application supports authentication, course publishing, and student enrollments with a clean API-driven flow.
 
+## Live Links
+
+- Frontend (Vercel): `https://learnox-lms-learning-management-sys.vercel.app`
+- Backend (Render): `https://learnox-lms-learning-management-system.onrender.com`
+- API Health Check: `https://learnox-lms-learning-management-system.onrender.com/api/health`
+
 ## Deploy (Get A Public Link For LinkedIn)
 
 You will get a shareable live URL after deploying the backend + frontend.
@@ -21,14 +27,14 @@ You will get a shareable live URL after deploying the backend + frontend.
 6. Environment variables:
    - `MONGODB_URI` = your Atlas connection string
    - `JWT_SECRET` = any long random string
-   - `CORS_ORIGIN` = your frontend URL (example: `https://learnox.vercel.app`)
+   - `CORS_ORIGIN` = your frontend URL (example: `https://learnox-lms-learning-management-sys.vercel.app`)
 
 After deploy, you’ll get a backend URL like: `https://learnox-backend.onrender.com`
 
 ### 3) Frontend Hosting (Vercel Or Netlify)
 
 Set this environment variable on your frontend host:
-- `VITE_API_BASE_URL` = `https://YOUR-BACKEND-URL/api`
+- `VITE_API_BASE_URL` = `https://YOUR-BACKEND-URL/api` (example: `https://learnox-lms-learning-management-system.onrender.com/api`)
 
 Your final shareable link is the frontend URL (Vercel/Netlify). Share that link on LinkedIn.
 
@@ -137,3 +143,4 @@ frontend/
 - MongoDB must be running locally or be available through a cloud connection string
 - Admin users can create courses from the frontend UI and the protected API
 - This implementation uses Context API to keep state management lightweight and readable
+- For local dev + production, you can set `CORS_ORIGIN` as a comma-separated list, e.g. `https://learnox-lms-learning-management-sys.vercel.app,http://localhost:5173`
