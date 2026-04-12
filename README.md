@@ -2,16 +2,6 @@
 
 A mini Learning Management System built with MongoDB, Express, React, and Node.js. The application supports authentication, course publishing, and student enrollments with a clean API-driven flow.
 
-## Live Links
-
-- Frontend (Vercel): `https://learnox-lms-learning-management-sys.vercel.app`
-- Backend (Render): `https://learnox-lms-learning-management-system.onrender.com`
-- API Health Check: `https://learnox-lms-learning-management-system.onrender.com/api/health`
-
-## Deploy (Get A Public Link For LinkedIn)
-
-You will get a shareable live URL after deploying the backend + frontend.
-
 ### 1) Database (MongoDB Atlas)
 1. Create a free cluster on MongoDB Atlas.
 2. Create a database user + password.
