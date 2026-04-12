@@ -8,11 +8,11 @@ A mini Learning Management System built with MongoDB, Express, React, and Node.j
 - Auth: `POST /api/register`, `POST /api/login` (JWT)
 - Courses: `GET /api/courses`, `POST /api/courses` (admin-only)
 - Enrollments: `POST /api/enroll/:courseId`, `GET /api/enroll/my-courses`
-- MongoDB collections/models: Users, Courses, Enrollments
-- Request validation and centralized error handling
+- MongoDB models: Users, Courses, Enrollments
+- Input validation and centralized error handling
 
 ### Frontend
-- Login / Signup
+- Login / Signup pages
 - Course listing (enroll from UI)
 - Enrolled courses page
 - Admin course creation page
@@ -94,3 +94,4 @@ npm run dev
 4. View enrolled courses in `My Learning`
 5. Signup/login as an admin
 6. Create courses from the Admin page
+
