@@ -6,17 +6,25 @@ A mini Learning Management System built with MongoDB, Express, React, and Node.j
 
 ### Backend
 - Auth: `POST /api/register`, `POST /api/login` (JWT)
-- Courses: `GET /api/courses`, `POST /api/courses` (admin-only)
+- Courses: `GET /api/courses`, `POST /api/courses`, `POST /api/courses/seed`, `DELETE /api/courses/:courseId`
 - Enrollments: `POST /api/enroll/:courseId`, `GET /api/enroll/my-courses`
 - MongoDB models: Users, Courses, Enrollments
 - Input validation and centralized error handling
 
 ### Frontend
 - Login / Signup pages
-- Course listing (enroll from UI)
+- Course listing page
 - Enrolled courses page
+- Student enrollment from the UI
 - Admin course creation page
+- Admin delete course action from the courses page
+- Admin restore demo courses button
 - Axios + React Context API
+
+## Live Demo
+
+- Live App (Vercel): `https://learnox-lms-learning-management-sys.vercel.app/login`
+- Live API Health (Render): `https://learnox-lms-learning-management-system.onrender.com/api/health`
 
 ## Project Structure
 
@@ -93,9 +101,10 @@ npm run dev
 3. Enroll in a course
 4. View enrolled courses in `My Learning`
    > Note (Demo/Test): The signup form allows selecting `role=admin` so evaluators can test the admin-only course creation flow easily. In a production app, admin access should be granted by the system (not chosen during signup).
-
-6. Signup/login as an admin
-7. Create courses from the Admin page
+5. Signup/login as an admin
+6. Create courses from the Admin page
+7. Delete courses from the courses page as admin
+8. Restore demo courses from the admin panel
 
 
 ## Screenshot
@@ -140,3 +149,8 @@ After deploy:
 
 If you host the frontend separately, set this build-time env var on the frontend host:
 - `VITE_API_BASE_URL=https://<your-render-service>/api`
+
+### Current Live Deployment
+
+- Frontend (Vercel): `https://learnox-lms-learning-management-sys.vercel.app/login`
+- Backend API health (Render): `https://learnox-lms-learning-management-system.onrender.com/api/health`
