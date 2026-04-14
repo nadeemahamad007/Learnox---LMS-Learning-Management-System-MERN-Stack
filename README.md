@@ -92,8 +92,34 @@ npm run dev
 2. Browse courses
 3. Enroll in a course
 4. View enrolled courses in `My Learning`
-5. Signup/login as an admin
-6. Create courses from the Admin page
+   > Note (Demo/Test): The signup form allows selecting `role=admin` so evaluators can test the admin-only course creation flow easily. In a production app, admin access should be granted by the system (not chosen during signup).
+
+6. Signup/login as an admin
+7. Create courses from the Admin page
+
+
+## Screenshot
+
+<img width="929" height="814" alt="Screenshot 2026-04-12 153912" src="https://github.com/user-attachments/assets/3b9ae1a0-e900-4022-a1c6-6ca09aa656eb" />
+
+<img width="929" height="814" alt="image" src="https://github.com/user-attachments/assets/fbbee2fc-1f31-4d2e-ae7c-f4be829aac4d" />
+
+<img width="929" height="814" alt="Screenshot 2026-04-12 154056" src="https://github.com/user-attachments/assets/a0674446-770f-42e4-b22c-f7e8e37814a1" />
+
+<img width="929" height="814" alt="Screenshot 2026-04-12 154246" src="https://github.com/user-attachments/assets/144ca671-a67e-471b-8bff-04a6b5bf1e9f" />
+
+<img width="929" height="814" alt="Screenshot 2026-04-12 154256" src="https://github.com/user-attachments/assets/5b6917e2-cafe-4bf8-98f4-cdc846376be8" />
+
+<img width="929" height="814" alt="Screenshot 2026-04-12 154312" src="https://github.com/user-attachments/assets/4a1d7705-141d-40dc-b9b5-7fbe5579d6b8" />
+
+<img width="929" height="814" alt="Screenshot 2026-04-12 154319" src="https://github.com/user-attachments/assets/dbb4130b-272b-44fa-939d-4e6875dc6eb7" />
+
+<img width="929" height="814" alt="Screenshot 2026-04-12 154326" src="https://github.com/user-attachments/assets/73e0f54f-6b2e-457b-a03e-9867abfa2f46" />
+
+<img width="929" height="814" alt="Screenshot 2026-04-12 154225" src="https://github.com/user-attachments/assets/db619001-553f-4332-b1d8-8571e5283f45" />
+
+<img width="929" height="814" alt="Screenshot 2026-04-12 154332" src="https://github.com/user-attachments/assets/02a4884a-1779-42ec-be6f-42bcb22b0032" />
+
 
 ## Deployment
 
