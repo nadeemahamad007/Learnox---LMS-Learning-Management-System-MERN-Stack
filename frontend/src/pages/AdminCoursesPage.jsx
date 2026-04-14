@@ -19,6 +19,7 @@ function AdminCoursesPage() {
   const [error, setError] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
   const [submitting, setSubmitting] = useState(false);
+  const [restoringDemo, setRestoringDemo] = useState(false);
   const heroSkillTags = [
     { key: "node", label: "Node", tone: "sky" },
     { key: "sql", label: "SQL", tone: "sun" },
@@ -53,6 +54,21 @@ function AdminCoursesPage() {
       setError(requestError.response?.data?.message || "Unable to create course");
     } finally {
       setSubmitting(false);
+    }
+  };
+
+  const handleRestoreDemoCourses = async () => {
+    setError("");
+    setSuccessMessage("");
+    setRestoringDemo(true);
+
+    try {
+      const response = await api.post("/courses/seed");
+      setSuccessMessage(response.data.message);
+    } catch (requestError) {
+      setError(requestError.response?.data?.message || "Unable to restore demo courses");
+    } finally {
+      setRestoringDemo(false);
     }
   };
 
@@ -95,9 +111,19 @@ function AdminCoursesPage() {
             <p className="eyebrow">Course studio</p>
             <h2 className="section-title-gradient">Create a New Course</h2>
           </div>
-          <button type="button" className="secondary-button" onClick={() => navigate("/courses")}>
-            Back to Courses
-          </button>
+          <div className="hero-actions">
+            <button
+              type="button"
+              className="secondary-button"
+              onClick={handleRestoreDemoCourses}
+              disabled={restoringDemo}
+            >
+              {restoringDemo ? "Restoring..." : "Restore Demo Courses"}
+            </button>
+            <button type="button" className="secondary-button" onClick={() => navigate("/courses")}>
+              Back to Courses
+            </button>
+          </div>
         </div>
 
         <div className="admin-layout admin-layout-polished">

@@ -1,7 +1,12 @@
 const express = require("express");
 const { body } = require("express-validator");
 
-const { getCourses, createCourse } = require("../controllers/courseController");
+const {
+  getCourses,
+  createCourse,
+  deleteCourse,
+  seedDefaultCourses
+} = require("../controllers/courseController");
 const authMiddleware = require("../middleware/authMiddleware");
 const adminMiddleware = require("../middleware/adminMiddleware");
 const validateRequest = require("../utils/validateRequest");
@@ -9,6 +14,13 @@ const validateRequest = require("../utils/validateRequest");
 const router = express.Router();
 
 router.get("/", getCourses);
+
+router.post(
+  "/seed",
+  authMiddleware,
+  adminMiddleware,
+  seedDefaultCourses
+);
 
 router.post(
   "/",
@@ -23,5 +35,7 @@ router.post(
   validateRequest,
   createCourse
 );
+
+router.delete("/:courseId", authMiddleware, adminMiddleware, deleteCourse);
 
 module.exports = router;

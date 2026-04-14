@@ -14,6 +14,7 @@ function CoursesPage() {
   const [loading, setLoading] = useState(true);
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
+  const [deletingCourseId, setDeletingCourseId] = useState("");
 
   const enrolledCourseIds = new Set(enrolledCourses.map((course) => course._id));
   const availableCourses = courses.length;
@@ -71,13 +72,15 @@ function CoursesPage() {
     setError("");
 
     try {
-      const [coursesResponse, enrolledResponse] = await Promise.all([
-        api.get("/courses"),
-        api.get("/enroll/my-courses")
-      ]);
-
+      const coursesResponse = await api.get("/courses");
       setCourses(coursesResponse.data);
-      setEnrolledCourses(enrolledResponse.data);
+
+      try {
+        const enrolledResponse = await api.get("/enroll/my-courses");
+        setEnrolledCourses(enrolledResponse.data);
+      } catch {
+        setEnrolledCourses([]);
+      }
     } catch (requestError) {
       setError(requestError.response?.data?.message || "Unable to load courses");
     } finally {
@@ -99,6 +102,22 @@ function CoursesPage() {
       await loadData();
     } catch (requestError) {
       setError(requestError.response?.data?.message || "Enrollment failed");
+    }
+  };
+
+  const handleDeleteCourse = async (courseId) => {
+    setMessage("");
+    setError("");
+    setDeletingCourseId(courseId);
+
+    try {
+      const response = await api.delete(`/courses/${courseId}`);
+      setMessage(response.data.message);
+      await loadData();
+    } catch (requestError) {
+      setError(requestError.response?.data?.message || "Unable to remove course");
+    } finally {
+      setDeletingCourseId("");
     }
   };
 
@@ -222,14 +241,25 @@ function CoursesPage() {
                   <p>{course.description}</p>
                 </div>
                 <div className="course-card-footer">
-                  <button
-                    type="button"
-                    className={isEnrolled ? "secondary-button" : "primary-button"}
-                    onClick={() => handleEnroll(course._id)}
-                    disabled={isEnrolled}
-                  >
-                    {isEnrolled ? "Already Enrolled" : "Enroll Now"}
-                  </button>
+                  {user?.role === "admin" ? (
+                    <button
+                      type="button"
+                      className="secondary-button"
+                      onClick={() => handleDeleteCourse(course._id)}
+                      disabled={deletingCourseId === course._id}
+                    >
+                      {deletingCourseId === course._id ? "Removing..." : "Delete Course"}
+                    </button>
+                  ) : (
+                    <button
+                      type="button"
+                      className={isEnrolled ? "secondary-button" : "primary-button"}
+                      onClick={() => handleEnroll(course._id)}
+                      disabled={isEnrolled}
+                    >
+                      {isEnrolled ? "Already Enrolled" : "Enroll Now"}
+                    </button>
+                  )}
                 </div>
               </article>
             );
