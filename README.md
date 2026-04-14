@@ -95,3 +95,22 @@ npm run dev
 5. Signup/login as an admin
 6. Create courses from the Admin page
 
+## Deployment
+
+### Option A (Recommended): Single Render service (backend serves frontend)
+
+This repo includes a `render.yaml` that builds the Vite frontend and serves it from the Express backend in production.
+
+On Render, set these environment variables:
+- `MONGODB_URI`
+- `JWT_SECRET`
+- (Optional) `CORS_ORIGIN` (comma-separated). Not required when frontend is served by the backend.
+
+After deploy:
+- App: `https://<your-render-service>/`
+- API health: `https://<your-render-service>/api/health`
+
+### Option B: Separate frontend hosting (Vercel/Netlify) + Render backend
+
+If you host the frontend separately, set this build-time env var on the frontend host:
+- `VITE_API_BASE_URL=https://<your-render-service>/api`
