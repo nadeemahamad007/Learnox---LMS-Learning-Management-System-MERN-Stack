@@ -1,7 +1,9 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || "http://localhost:5000/api"
+  // Prefer same-origin in production (when the backend serves the frontend).
+  // For separate frontend hosting, set VITE_API_BASE_URL to the backend URL.
+  baseURL: import.meta.env.VITE_API_BASE_URL || "/api"
 });
 
 api.interceptors.request.use((config) => {
