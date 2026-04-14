@@ -54,6 +54,14 @@ app.use("/api/enroll", enrollmentRoutes);
 // This keeps the app working even if a separate frontend host isn't configured.
 if (process.env.NODE_ENV === "production") {
   const frontendDistPath = path.resolve(__dirname, "../../frontend/dist");
+  const frontendAssetsPath = path.join(frontendDistPath, "assets");
+
+  app.use(
+    "/assets",
+    express.static(frontendAssetsPath, {
+      fallthrough: false
+    })
+  );
   app.use(express.static(frontendDistPath));
 
   // SPA fallback (do not hijack API routes)
